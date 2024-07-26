@@ -6,6 +6,7 @@ local shell = require("shell")
 local arg, options = shell.parse(...)
 if #arg < 1 then
 	print("Usage: dumptape filename")
+	print("Dumps the contents of a tape into a file.")
 	print("Options:")
 	print(" --address=addr  use tapedrive at address")
 	return

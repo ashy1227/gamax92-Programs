@@ -9,5 +9,17 @@ Clears an entire tape back to 0x00.
  loadtape.lua
 Loads a block of data into a tape drive, also sets playback speed.
 
+ setlabel.lua
+Set the label on a tape.
+
  setspeed.lua
 Set the playback speed of a tape drive.
+
+ setvolume.lua
+Set the playback volume of a tape drive.
+
+ tapeplay.lua
+Start or stop tape playback on a tape drive.
+
+ tapeseek.lua
+Fast forward / rewind a tape drive.

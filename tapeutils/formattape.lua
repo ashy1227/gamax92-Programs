@@ -5,6 +5,7 @@ local arg, options = shell.parse(...)
 
 if #arg > 0 then
 	print("Usage: formattape")
+	print("Clears an entire tape back to 0x00.")
 	print("Options:")
 	print(" --address=addr  use tapedrive at address")
 	return

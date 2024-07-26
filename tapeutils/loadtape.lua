@@ -6,9 +6,11 @@ local shell = require("shell")
 local arg, options = shell.parse(...)
 if #arg < 1 then
 	print("Usage: loadtape filename")
+	print("Loads a block of data into a tape drive, also sets playback speed.")
 	print("Options:")
-	print(" --speed=n       set playback speed")
 	print(" --address=addr  use tapedrive at address")
+	print(" --speed=n       set playback speed")
+	print(" --label=str     set label")
 	return
 end
 arg[1] = shell.resolve(arg[1])
@@ -66,4 +68,9 @@ if options.speed then
 	local speed = tonumber(options.speed)
 	td.setSpeed(speed)
 	print("Tape playback speed set to " .. speed .. ", " .. speed * 32768 .. "Hz")
+end
+if options.label then
+	local label = options.label
+	td.setLabel(label)
+	print("Tape label set to \"" .. label .. "\"")
 end
